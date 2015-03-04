@@ -1,0 +1,31 @@
+<html t:type="layout" title="View Patient"
+	t:sidebarTitle="Browse Medicine" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd"
+	xmlns:p="tapestry:parameter">
+
+<a t:type="pagelink" t:page="prescription/CreatePrescription"
+	t:context="patient.id" href="#"> New Prescription </a>
+<p><a t:type="actionlink" t:id="viewVoterIdLink" t:target="_blank" href="#">View Voter File</a></p>
+<t:beandisplay object="patient" reorder="name, id, phone, address, voterId"/>
+
+
+<table t:type="grid" t:source="visits" t:row="visit" t:rowsPerPage="20"
+	t:pagerPosition="top" t:add="action" t:include="created">
+	<p:empty>
+		<p>No Results... New Patient</p>
+	</p:empty>
+	<p:actionCell>
+		<a t:type="actionlink" t:id="prescriptionViewLink" context="visit.id" href="#"
+			target="_blank">View</a>
+	</p:actionCell>
+
+</table>
+<p:sidebar>
+	<t:pagelink page="medicine/CreateMedicine">Create Medicine</t:pagelink>
+	<br></br>
+	<t:pagelink page="medicine/ListMedicines">List Medicine</t:pagelink>
+	<br></br>
+	<br></br>
+</p:sidebar>
+
+</html>

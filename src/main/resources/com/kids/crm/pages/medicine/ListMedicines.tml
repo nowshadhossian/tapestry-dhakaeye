@@ -1,0 +1,29 @@
+<html t:type="layout" title="List Medicines"
+	  t:sidebarTitle="Browse Medicine"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd"
+      xmlns:p="tapestry:parameter">
+ 
+      <table t:type="grid" t:source="medicines" t:row="medicine" 
+      t:rowsPerPage="20" t:pagerPosition="top" t:add="action" reorder="id, name">
+		<p:empty>
+              <p>There are no members to display; you can <t:pagelink page="medicine/CreateMedicine">add some</t:pagelink>.</p>
+        </p:empty>
+         <p:actionCell>
+			<a t:type="pagelink" t:page="medicine/ViewMedicine"
+				t:context="medicine.id" href="#"><img src="${context:icon/View.png}" border="0"/></a>
+			<a t:type="pagelink" t:page="medicine/EditMedicine"
+				t:context="medicine.id" href="#"> <img src="${context:icon/Edit Item.png}" border="0" alt="Edit Item"/> </a>
+		</p:actionCell>
+       
+	  </table>
+     
+ <p:sidebar>
+	<t:pagelink page="medicine/CreateMedicine">Create Medicine</t:pagelink>
+    <br></br>
+	<t:pagelink page="medicine/ListMedicines">List Medicines</t:pagelink> 
+	<br></br>
+	<br></br>
+</p:sidebar>
+     
+
+</html>

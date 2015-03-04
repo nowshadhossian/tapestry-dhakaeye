@@ -1,0 +1,14 @@
+<html t:type="layout" title="Create Medicine"
+	  t:sidebarTitle="Browse Medicine"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd"
+      xmlns:p="tapestry:parameter">
+
+     <t:beaneditform submitlabel="Create Medicine" object="medicine" exclude="id, created , updated"/>
+<p:sidebar>
+	<t:pagelink page="medicine/CreateMedicine">Create Medicine</t:pagelink>
+    <br></br>
+	<t:pagelink page="medicine/ListMedicines">List Medicine</t:pagelink>  
+	<br></br>
+	<br></br>
+</p:sidebar>
+</html>

@@ -1,0 +1,29 @@
+<html t:type="layout" title="About tapestryHiber"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd"
+      xmlns:p="tapestry:parameter">
+
+<script type="text/javascript">
+
+function confirmation() {
+	var answer = confirm("Are You sure?")
+	if (answer){
+		alert("deleted")
+	}
+	else{
+		alert("Thanks for sticking around!")
+	}
+}
+
+</script>
+
+    <p>About tapestryHiber application ...</p>
+	<div style="margin: 20px;">
+		<form t:type="form">
+			Type in a First name:
+			 <input t:id="fNameTf" t:type="TextField" t:mixins="autocomplete" /> 
+		</form>
+	</div>
+	
+	<a href="#" onclick="confirmation()">click me</a>
+
+</html>

@@ -1,0 +1,14 @@
+<html t:type="indexLayout" title="HomePage"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd"
+      xmlns:p="tapestry:parameter">
+        <!-- Most of the page content, including <head>, <body>, etc. tags, comes from Layout.tml -->
+
+<img alt="image not found" src="images/doctor computer.jpg" width="96%" style="border-style: solid; border-width: 5px"></img>
+    <p><h2><u>Welcome </u></h2></p>
+    Hello My name is Chapter 19, attention turns from consumers to suppliers. Chapter 19 discusses why firms exist and profit maximization as the objective of firms and introduces the concepts of accounting and economic profit. The decisions of how much to produce and at what price to sell it are functions of three variables: costs, revenues, and market structure. Chapters 20-22 will discuss market structure and the revenue conditions facing firms under each of the different market structures. This chapter looks at costs. All production involves costs. 
+  Click on any of these button:  
+    
+    <p><t:pageLink t:page="patient/CreatePatient">New Patient</t:pageLink></p>
+    <t:pageLink t:page="patient/ExistingPatient">Search Patient</t:pageLink>
+
+</html>

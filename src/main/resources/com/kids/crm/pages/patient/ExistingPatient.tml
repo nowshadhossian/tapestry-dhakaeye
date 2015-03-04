@@ -1,0 +1,37 @@
+<html t:type="layout" title="Existing Patient"
+	  t:sidebarTitle=" Medicine"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd"
+      xmlns:p="tapestry:parameter">
+<div class="t-beaneditor">
+<t:form >
+   		<t:beaneditor submitlabel="Search Patient" object="patient" include="id"/>
+   		
+		<div class="t-beaneditor-row"><label>Type Patient name</label><input t:id="patientNameTf" t:type="TextField" t:mixins="autocomplete" /></div>
+		
+	    <div class="t-beaneditor-row"><label>Or type Patient Voter Id</label><input t:id="patientVoterIdTf" t:type="TextField" t:mixins="autocomplete" /></div>
+		<p><t:submit value="Search Patient"/></p>
+</t:form>
+</div>
+
+  <table t:type="grid" t:source="patientSearch" t:row="patient" 
+      t:rowsPerPage="20" t:pagerPosition="top" t:add="action">
+		<p:empty>
+              <p>No Result</p>
+        </p:empty>
+         <p:actionCell>
+			<a t:type="pagelink" t:page="patient/ViewPatient"
+				t:context="patient.id" href="#"> View </a>
+			<a t:type="pagelink" t:page="patient/ViewPatient"
+				t:context="patient.id" href="#"> Edit </a>
+				
+		</p:actionCell>
+	</table>
+<p:sidebar>
+	<t:pagelink page="medicine/CreateMedicine">Create Medicine</t:pagelink>
+    <br></br>
+	<t:pagelink page="medicine/ListMedicines">List Medicine</t:pagelink>
+	<br></br>
+	<br></br>
+</p:sidebar>
+
+</html>

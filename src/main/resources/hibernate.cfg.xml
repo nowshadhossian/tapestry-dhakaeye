@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+   <session-factory>
+       <property name="connection.driver_class">org.postgresql.Driver</property>
+       <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/dhakaeye</property>
+      <property name="hibernate.connection.username">crmuser</property>
+      <property name="hibernate.connection.password">crmpass</property>
+
+        <!-- JDBC connection pool (use the built-in) -->
+        <property name="connection.pool_size">2</property>
+
+        <!-- SQL dialect -->
+        <property name="dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+
+        <!-- Enable Hibernate's current session context 
+        <property name="current_session_context_class">thread</property>-->
+
+        <!-- Disable the second-level cache  
+        <property name="cache.provider_class">org.hibernate.cache.NoCacheProvider</property>-->
+
+        <!-- Echo all executed SQL to stdout -->
+        <property name="show_sql">true</property>
+        <property name="hibernate.hbm2ddl.auto">create</property>
+        <listener type="pre-insert" class="com.kids.crm.db.Persistent"/>
+        <listener type="pre-update" class="com.kids.crm.db.Persistent"/>
+       
+    
+   </session-factory>
+</hibernate-configuration>

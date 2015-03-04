@@ -1,0 +1,20 @@
+<html t:type="layout" title="Create Patient"
+	  t:sidebarTitle="Browse Medicine"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd"
+      xmlns:p="tapestry:parameter">
+
+    <!--  <t:beaneditform submitlabel="New Patient" object="patient" exclude="voterfilename, id, created , updated"/>
+     -->
+     <t:form>
+   		<t:beaneditor t:id="patient" object="patient" exclude="voterfilename, id, created , updated" />
+   		<div class="t-beaneditor-row"><label>Upload Voter File</label><input t:type="upload" t:id="file" t:value="file"/></div>
+		<t:submit value="Create Patient"/>
+   </t:form>
+<p:sidebar>
+	<t:pagelink page="medicine/CreateMedicine">Create Medicine</t:pagelink>
+    <br></br>
+	<t:pagelink page="medicine/ListMedicines">List Medicine</t:pagelink>  
+	<br></br>
+	<br></br>
+</p:sidebar>
+</html>

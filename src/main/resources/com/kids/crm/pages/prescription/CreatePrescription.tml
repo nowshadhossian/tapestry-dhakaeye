@@ -1,0 +1,24 @@
+<html t:type="layout" title="Create Prescription"
+	  t:sidebarTitle="Browse Medicine"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd"
+      xmlns:p="tapestry:parameter">
+      <p><b>Patient Id:</b> ${patient.id}</p><p> <b>Name: </b>${patient.name} </p>
+<t:form>
+        <t:errors/>
+        <input t:type="upload" t:id="file" t:value="file" validate="required"/>
+        <br/>
+        <input type="submit" value="Upload"/>
+    </t:form>
+
+
+
+
+
+<p:sidebar>
+	<t:pagelink page="medicine/CreateMedicine">Create Medicine</t:pagelink>
+    <br></br>
+	<t:pagelink page="medicine/ListMedicines">List Medicine</t:pagelink>  
+	<br></br>
+	<br></br>
+</p:sidebar>
+</html>
